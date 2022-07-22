@@ -1,8 +1,5 @@
-
 function rooms() {
-  return (
-    <div>rooms</div>
-  )
+  return <div>rooms</div>;
 }
 
 export default rooms;

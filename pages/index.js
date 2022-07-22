@@ -1,5 +1,5 @@
-import Head from 'next/head'
-import { WelcomeStep } from '../components/steps/WelcomeStep'
+import Head from "next/head";
+import { WelcomeStep } from "../components/steps/WelcomeStep";
 
 export default function Home() {
   return (
@@ -11,5 +11,5 @@ export default function Home() {
       </Head>
       <WelcomeStep />
     </div>
-  )
+  );
 }
