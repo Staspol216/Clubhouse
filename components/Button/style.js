@@ -1,7 +1,6 @@
 import { css } from "@emotion/react";
-import styled from "@emotion/styled";
 
-export const StyledButton = styled.button`
+export const button = css`
   height: 48px;
   background: #5677ad;
   border-radius: 30px;
@@ -29,17 +28,17 @@ const colors = {
 };
 
 export const buttonColorScheme = {
-  buttonGreen: css({
-    backgroundColor: colors.green,
-    "&:hover, &:active": {
-      backgroundColor: `darken(${colors.green}, 2%)`,
-    },
-  }),
-  buttonGray: css({
-    backgroundColor: colors.gray,
-    color: "#323232",
-    "&:hover, &:active": {
-      backgroundColor: `darken(${colors.gray}, 2%)`,
-    },
-  }),
+  buttonGreen: css`
+    background-color: ${colors.green};
+    &:hover, &:active {
+       background-color: darken(${colors.green}, 2%);
+    }
+  `,
+  buttonGray: css`
+    background-color: ${colors.gray};
+    color: "#323232";
+    &:hover, &:active {
+      background-color: darken(${colors.gray}, 2%)
+    }
+  `,
 };

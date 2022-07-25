@@ -1,5 +1,5 @@
-import * as Styled from "./style";
+import { modalBlock } from "./style";
 
 export const ModalBlock = ({ children }) => {
-  return <Styled.ModalBlock>{children}</Styled.ModalBlock>;
+  return <div css={modalBlock}>{children}</div>;
 };
