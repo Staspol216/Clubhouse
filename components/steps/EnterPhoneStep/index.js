@@ -4,6 +4,9 @@ import { ModalBlock } from "../../ModalBlock"
 import StepInfo from "../../StepInfo"
 
 const EnterPhoneStep = () => {
+
+  // eslint-disable-next-line no-unused-vars
+  const [isLoading, setIsLoading] = React.useState(false);
   return (
     <div сss={style.wrapper}>
       <StepInfo 
@@ -16,10 +19,14 @@ const EnterPhoneStep = () => {
           <img src="/static/russian-flag.png" alt="flag" width={24} />
         </div>
         <Button>
-          <>
-                Next
-            <img css={{display: "inline-block", marginLeft: "10px"}} src="/static/arrow.svg" />
-          </>
+          { isLoading ? (
+            "Sending..."
+          ) : (
+            <>
+              Next
+              <img css={{display: "inline-block", marginLeft: "10px"}} src="/static/arrow.svg" />
+            </>
+          )}
         </Button>
         <p css={style.policyText}>
           By entering your number, you’re agreeing to our Terms of Service and Privacy Policy.
