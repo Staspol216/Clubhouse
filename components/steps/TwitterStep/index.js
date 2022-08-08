@@ -1,13 +1,13 @@
 import { link } from "../../../styles/_display.tsx";
 import Button from "../../Button";
-import { ModalBlock } from "../../ModalBlock";
+import Modal from "../../ModalBlock";
 import { btnIcon, enterLink } from "./style";
 
 
 export const TwitterStep = () => {
   return (
     <div>
-      <ModalBlock>
+      <Modal>
         <div>
           <b>
             AD
@@ -21,7 +21,7 @@ export const TwitterStep = () => {
           <img css={btnIcon} />
         </Button>
         <div css={[link, enterLink]}>Enter my info manually</div>
-      </ModalBlock>
+      </Modal>
     </div>
   )
 }

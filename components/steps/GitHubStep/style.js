@@ -38,3 +38,9 @@ export const image = css`
     display: inline-block;
     margin-left: 10;
 `
+
+export const link = css`
+    margin-top: 20px;
+    cursor: pointer;
+    display: inline-block;
+`

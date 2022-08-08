@@ -1,15 +1,15 @@
 import { HiArrowRight } from "react-icons/hi";
 import { link } from "../../../styles/_display.tsx";
 import Button from "../../Button";
-import { ModalBlock } from "../../ModalBlock";
+import Modal from "../../Modal";
 import { btnIcon, handWaveImage, signInLink, title } from "./style";
 
 
 export const WelcomeStep = () => {
   return (
-    <ModalBlock>
+    <Modal>
       <h3 css={title}>
-        <img css={handWaveImage} src="/static/handle_logo.png" alt="hello" />
+        <img css={handWaveImage} src="/static/hand-wave.png" alt="Celebration" />
         Welcome to de Clubhouse Body!
       </h3>
       <p>
@@ -20,10 +20,10 @@ export const WelcomeStep = () => {
       <div>
         <Button css={{margin: "0 auto"}}>
           Get your username
-          <HiArrowRight color="#fff" css={btnIcon} src="/static/arrow-right.svg" />
+          <HiArrowRight color="#fff" css={btnIcon} src="/static/arrow.svg" />
         </Button>
       </div>
       <div css={[link, signInLink]}>Have an invite text? Sign in</div>
-    </ModalBlock>
+    </Modal>
   );
 };

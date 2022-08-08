@@ -1,28 +1,25 @@
-import React from "react";
-import { loader } from "../../../styles/_display";
-import { ModalBlock } from "../../ModalBlock";
+import Modal from "../../Modal";
 import StepInfo from "../../StepInfo";
 import * as style from "./style";
 
 const EnterCodeStep = () => {
 
+  let Condition = true;
   // eslint-disable-next-line no-unused-vars
-  const [isLoading, setIsLoading] = React.useState(false);
-    
   return (
     <div css={style.wrapper}>
-      {!isLoading ? (
+      {Condition ? (
         <>
           <StepInfo icon="/static/numbers.png" title="Enter your activate code" />
-          <ModalBlock css={style.modal}>
+          <Modal css={style.modal}>
             <div css={style.codeInput}>
 
             </div>
-          </ModalBlock>
+          </Modal>
         </>
       ) : (
         <div css={{textAlign: "text-center" }}>
-          <div css={loader}></div>
+          <div></div>
           <h3 css={{marginTop: 5}}>Activation in progress ...</h3>
         </div>
       )}

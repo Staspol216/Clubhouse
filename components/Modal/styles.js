@@ -1,6 +1,6 @@
-import { css } from "@emotion/react";
+import styled from "@emotion/styled";
 
-export const modalBlock = css`
+export const Modal = styled.div`
   width: 100%;
   max-width: 650px;
   min-height: 200px;

@@ -2,23 +2,23 @@ import React from "react";
 import { link } from "../../../styles/_display";
 import Avatar from "../../Avatar";
 import Button from "../../Button";
-import { ModalBlock } from "../../ModalBlock";
+import Modal from "../../Modal";
 import StepInfo from "../../StepInfo";
-import * as style from "./style";
+import * as Style from "./style";
 
 const ChooseAvatarStep = () => {
   return (
-    <div css={style.wrapper}>
+    <Style.Wrapper>
       <StepInfo
         icon="/static/celebration.png"
         title={"Okay, !"}
         description="How’s this photo?"
       />
-      <ModalBlock css={style.modal}>
-        <div css={style.avatar}>
+      <Modal css={Style.modal}>
+        <div css={Style.avatar}>
           <Avatar />
         </div>
-        <div css={{marginBottom: 30}}>
+        <div css={Style.iconLabel}>
           <label htmlFor="image" css={[link]}>
             Choose a different photo
           </label>
@@ -26,10 +26,10 @@ const ChooseAvatarStep = () => {
         <input id="image" type="file" hidden />
         <Button>
           Next
-          <img css={{display: "inline-block", marginLeft: 10}} src="/static/arrow.svg" />
+          <img css={Style.buttonIcon} src="/static/arrow.svg" />
         </Button>
-      </ModalBlock>
-    </div>
+      </Modal>
+    </Style.Wrapper>
   )
 }
 

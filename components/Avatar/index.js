@@ -1,14 +1,20 @@
-import * as style from "./style";
+import * as Styled from "./styles";
 
-const Avatar = ({ src, letters }) => {
+const Avatar = ({ 
+  src, 
+  letters, 
+  isVoice,
+  width,
+  height, 
+}) => {
   return (
-    <div css={[
-      style.avatar, style.avatarBorder, 
-      { backgroundImage: src ? `url(${src})` : ""}, 
-      { [style.emptyAvatar]: !src }]}
-    >
+    <Styled.Avatar 
+      width={width} 
+      height={height}
+      isVoice={isVoice}
+      src={src}>
       {!src ? letters : null}
-    </div>
+    </Styled.Avatar>
   )
 }
 

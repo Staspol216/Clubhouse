@@ -7,6 +7,7 @@ export const wrapper = css`
 
 export const block = css`
     width: 460px;
+    margin: 0 auto;
     margin-top: 30px;
 `
 

@@ -1,12 +1,10 @@
-import * as style from ".style"
-import { Button } from "../../Button"
-import { ModalBlock } from "../../ModalBlock"
-import StepInfo from "../../StepInfo"
+import NumberFormat from "react-number-format";
+import Button from "../../Button";
+import Modal from "../../Modal";
+import StepInfo from "../../StepInfo";
+import * as style from "./style";
 
-const EnterPhoneStep = () => {
-
-  // eslint-disable-next-line no-unused-vars
-  const [isLoading, setIsLoading] = React.useState(false);
+export const EnterPhoneStep = () => {
   return (
     <div сss={style.wrapper}>
       <StepInfo 
@@ -14,27 +12,25 @@ const EnterPhoneStep = () => {
         title="Enter your phone #"
         description="We will send you a confirmation code" 
       />
-      <ModalBlock>
+      <Modal css={style.block}>
         <div css={style.input}>
           <img src="/static/russian-flag.png" alt="flag" width={24} />
+          <NumberFormat
+            className="field"
+            format="+# (###) ###-##-##"
+            mask="_"
+            placeholder="+7 (999) 333-22-11"
+          />
         </div>
         <Button>
-          { isLoading ? (
-            "Sending..."
-          ) : (
-            <>
-              Next
-              <img css={{display: "inline-block", marginLeft: "10px"}} src="/static/arrow.svg" />
-            </>
-          )}
+          Next
+          <img css={{display: "inline-block", marginLeft: "10px"}} src="/static/arrow.svg" />
         </Button>
         <p css={style.policyText}>
           By entering your number, you’re agreeing to our Terms of Service and Privacy Policy.
           Thanks!
         </p>
-      </ModalBlock>
+      </Modal>
     </div>
   )
 }
-
-export default EnterPhoneStep

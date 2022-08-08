@@ -1,5 +1,10 @@
-function rooms() {
-  return <div>rooms</div>;
+import { EnterPhoneStep } from "../components/steps/EnterPhoneStep";
+
+export default function rooms() {
+  return (
+    <div>
+      <EnterPhoneStep />
+    </div>
+  );
 }
 
-export default rooms;

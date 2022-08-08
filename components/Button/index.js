@@ -1,16 +1,16 @@
-import { button, buttonColorScheme } from "./style";
+import * as Styled from "./style";
 
 const Button = ({ children, disabled, color, onClick, ...props}) => {
   return (
-    <button
+    <Styled.Button
       type="button"
       onClick={onClick}
       disabled={disabled}
-      css={[buttonColorScheme[color], button]}
       {...props}
+      color={color}
     >
       {children}
-    </button>
+    </Styled.Button>
   );
 };
 
