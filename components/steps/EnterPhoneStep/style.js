@@ -5,11 +5,6 @@ export const wrapper = css`
     text-align: center;
 `
 
-export const block = css`
-    width: 460px;
-    margin: 0 auto;
-    margin-top: 30px;
-`
 
 export const input = css`
     position: relative;

@@ -1,13 +1,13 @@
-import * as style from "./style";
+import * as Styled from "./style";
 
 const StepInfo = ({ title, description, icon }) => {
   return (
     <div>
       <div>
-        <img css={style.img} src={icon} alt="Step picture" />
+        <Styled.Image src={icon} alt="Step picture" />
       </div>
-      <b className={style.title}>{title}</b>
-      {description && <p className={style.description}>{description}</p>}
+      <Styled.Title>{title}</Styled.Title>
+      {description && <Styled.Description>{description}</Styled.Description>}
     </div>
   );
 };

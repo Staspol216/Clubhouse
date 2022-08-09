@@ -7,7 +7,7 @@ import { btnIcon, handWaveImage, signInLink, title } from "./style";
 
 export const WelcomeStep = () => {
   return (
-    <Modal>
+    <Modal css={{width: 650}}>
       <h3 css={title}>
         <img css={handWaveImage} src="/static/hand-wave.png" alt="Celebration" />
         Welcome to de Clubhouse Body!

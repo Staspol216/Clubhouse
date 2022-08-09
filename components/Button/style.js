@@ -6,21 +6,22 @@ const colors = {
   gray: "#f2f2f2",
 };
 
-const buttonColorScheme = {
-  buttonGreen: css`
-    background-color: ${colors.green};
-    &:hover, &:active {
-       background-color: darken(${colors.green}, 2%);
-    }
-  `,
-  buttonGray: css`
-    background-color: ${colors.gray};
-    color: "#323232";
-    &:hover, &:active {
-      background-color: darken(${colors.gray}, 2%)
-    }
-  `,
-};
+
+const greenBtn = css`
+  background-color: ${colors.green};
+  &:hover, &:active {
+      background-color: darken(${colors.green}, 2%);
+  }
+`;
+
+const grayBtn = css`
+  background-color: ${colors.gray};
+  color: "#323232";
+  &:hover, &:active {
+    background-color: darken(${colors.gray}, 2%)
+  }
+`;
+
 
 export const Button = styled.button`
   height: 48px;
@@ -37,9 +38,9 @@ export const Button = styled.button`
   ${({color}) => {
     switch (color) {
       case "green":
-        return buttonColorScheme.buttonGreen
+        return greenBtn
       case "gray":
-        return buttonColorScheme.buttonGray
+        return grayBtn
       default:
         return css`
           background-color: #5677ad;

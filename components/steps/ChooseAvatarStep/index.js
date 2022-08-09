@@ -4,32 +4,28 @@ import Avatar from "../../Avatar";
 import Button from "../../Button";
 import Modal from "../../Modal";
 import StepInfo from "../../StepInfo";
-import * as Style from "./style";
+import * as Styled from "./style";
 
 const ChooseAvatarStep = () => {
   return (
-    <Style.Wrapper>
+    <Styled.Wrapper>
       <StepInfo
         icon="/static/celebration.png"
         title={"Okay, !"}
         description="How’s this photo?"
       />
-      <Modal css={Style.modal}>
-        <div css={Style.avatar}>
-          <Avatar />
-        </div>
-        <div css={Style.iconLabel}>
-          <label htmlFor="image" css={[link]}>
-            Choose a different photo
-          </label>
-        </div>
+      <Modal>
+        <Avatar />
+        <Styled.Label htmlFor="image" css={[link]}>
+          Choose a different photo
+        </Styled.Label>
         <input id="image" type="file" hidden />
         <Button>
           Next
-          <img css={Style.buttonIcon} src="/static/arrow.svg" />
+          <Styled.ButtonIcon src="/static/arrow.svg" />
         </Button>
       </Modal>
-    </Style.Wrapper>
+    </Styled.Wrapper>
   )
 }
 

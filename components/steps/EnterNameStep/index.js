@@ -13,9 +13,9 @@ const EnterNameStep = () => {
         title="What’s your full name?"
         description="People use real names on Clubhouse :) Thnx!"
       />
-      <Modal css={{width: 460}}>
-        <Avatar css={{width: 120, heigth: 120}}/>
-        <div css={{ marginTop: 30, marginBottom: 30}}>
+      <Modal>
+        <Avatar width={120} height={120}/>
+        <div>
           <input
             css={field}
             placeholder="Enter fullname"

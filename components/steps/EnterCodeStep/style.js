@@ -1,16 +1,11 @@
-import { css } from "@emotion/react"
+import styled from "@emotion/styled";
 
-export const wrapper = css`
+export const Wrapper = styled.div`
     margin: 100px auto;
     text-align: center;
 `
 
-export const modal = css`
-    margin: auto;
-    margin-top: 30px;
-`
-
-export const codeInput = css`
+export const CodeInputWrapper = styled.div`
     input {
     background: #ffffff;
     border: 1px solid #e3e3e3;

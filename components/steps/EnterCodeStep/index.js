@@ -1,20 +1,20 @@
 import Modal from "../../Modal";
 import StepInfo from "../../StepInfo";
-import * as style from "./style";
+import * as Styled from "./style";
 
 const EnterCodeStep = () => {
 
   let Condition = true;
   // eslint-disable-next-line no-unused-vars
   return (
-    <div css={style.wrapper}>
+    <Styled.Wrapper>
       {Condition ? (
         <>
           <StepInfo icon="/static/numbers.png" title="Enter your activate code" />
-          <Modal css={style.modal}>
-            <div css={style.codeInput}>
+          <Modal>
+            <Styled.CodeInputWrapper>
 
-            </div>
+            </Styled.CodeInputWrapper>
           </Modal>
         </>
       ) : (
@@ -23,7 +23,7 @@ const EnterCodeStep = () => {
           <h3 css={{marginTop: 5}}>Activation in progress ...</h3>
         </div>
       )}
-    </div>
+    </Styled.Wrapper>
   )
 }
 

@@ -24,8 +24,8 @@ export const Avatar = styled.div`
     border: 5px solid #fff;
     box-shadow: 0 0 0 4px #e5e0d0;
     background-image: ${({ src }) => ( src ? `url(${src})` : "")};
-    ${({ width }) => (width ? width : "45px")}
-    ${({ height }) => (height ? height : "45px")}
-    ${({ isVoice }) => ( isVoice ? voicedAvatarBorder : "")}
-    ${({ src }) => ( src ? "" : emptyAvatar )}
+    width: ${({ width }) => (width ? width : "45px")};
+    height: ${({ height }) => (height ? height : "45px")};
+    ${({ isVoice }) => ( isVoice ? voicedAvatarBorder : "")};
+    ${({ src }) => ( src ? "" : emptyAvatar )};
 `
