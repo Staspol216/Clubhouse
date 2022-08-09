@@ -1,19 +1,20 @@
 import NumberFormat from "react-number-format";
+import { ModalWrapper } from "../../../styles/shared";
 import Button from "../../Button";
 import Modal from "../../Modal";
 import StepInfo from "../../StepInfo";
-import * as style from "./style";
+import * as Styled from "./style";
 
 export const EnterPhoneStep = () => {
   return (
-    <div сss={style.wrapper}>
-      <StepInfo 
+    <ModalWrapper>
+      <StepInfo
         icon="/static/phone.png"
         title="Enter your phone #"
-        description="We will send you a confirmation code" 
+        description="We will send you a confirmation code"
       />
-      <Modal css={style.block}>
-        <div css={style.input}>
+      <Modal>
+        <Styled.InputWrapper>
           <img src="/static/russian-flag.png" alt="flag" width={24} />
           <NumberFormat
             className="field"
@@ -21,16 +22,16 @@ export const EnterPhoneStep = () => {
             mask="_"
             placeholder="+7 (999) 333-22-11"
           />
-        </div>
+        </Styled.InputWrapper>
         <Button>
           Next
-          <img css={{display: "inline-block", marginLeft: "10px"}} src="/static/arrow.svg" />
+          <Styled.Image src="/static/arrow.svg" />
         </Button>
-        <p css={style.policyText}>
-          By entering your number, you’re agreeing to our Terms of Service and Privacy Policy.
-          Thanks!
-        </p>
+        <Styled.PolicyText>
+          By entering your number, you’re agreeing to our Terms of Service and
+          Privacy Policy. Thanks!
+        </Styled.PolicyText>
       </Modal>
-    </div>
-  )
-}
+    </ModalWrapper>
+  );
+};

@@ -12,12 +12,4 @@ export const Modal = styled.div`
   box-sizing: border-box;
   box-shadow: 0px 2px rgba(0, 0, 0, 0.05);
   border-radius: 20px;
-  text-align: center;
-
-  p {
-    margin-bottom: 40px;
-
-    font-size: 20px;
-    line-height: 36px;
-  }
 `;

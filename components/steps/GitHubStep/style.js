@@ -1,46 +1,21 @@
-import { css } from "@emotion/react";
+import styled from "@emotion/styled";
+import Button from "../../Button";
 
-export const avatar = css`
-    position: relative;
+export const GHButton = styled(Button)`
+  background-color: #24292e;
 
-    b {
-        position: absolute;
-        font-size: 28px;
-        left: 50%;
-        top: 47%;
-        transform: translate(-50%, -50%);
-    }  
-`
-
-export const wrapper = css`
-    margin: 100px auto;
-    text-align: center;
-
-  p {
-    font-size: 20px;
-    line-height: 36px;
-    margin-bottom: 40px;
+  &:hover {
+    background-color: lighten(#24292e, 10);
   }
-`
+`;
 
-export const modal = css`
-    width: 460px;
-    margin: 0 auto;
-    margin-top: 40px;
-`
+export const Image = styled.img`
+  display: inline-block;
+  margin-left: 10;
+`;
 
-export const button = css`
-    display: inline-flex;
-    align-items: center;
-`
-
-export const image = css`
-    display: inline-block;
-    margin-left: 10;
-`
-
-export const link = css`
-    margin-top: 20px;
-    cursor: pointer;
-    display: inline-block;
-`
+export const Link = styled.div`
+  margin-top: 20px;
+  cursor: pointer;
+  display: inline-block;
+`;

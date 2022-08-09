@@ -1,6 +1,19 @@
-import { css } from "@emotion/react";
+import styled from "@emotion/styled";
+import { HiArrowRight } from "react-icons/hi";
+import Modal from "../../Modal";
 
-export const handWaveImage = css`
+export const WelcomeModal = styled(Modal)`
+  width: 650px;
+  margin: 100px auto;
+  text-align: center;
+  p {
+    font-size: 20px;
+    line-height: 36px;
+    margin-bottom: 40px;
+  }
+`;
+
+export const HandWaveImage = styled.img`
   animation-name: wave-animation;
   animation-duration: 3s;
   animation-iteration-count: 1;
@@ -12,22 +25,20 @@ export const handWaveImage = css`
   margin-bottom: 3px;
 `;
 
-export const title = css`
+export const Title = styled.h3`
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 22px;
 `;
 
-export const btnIcon = css`
+export const BtnIcon = styled(HiArrowRight)`
   display: inline-block;
   margin-left: 10px;
-  color: "#fff";
-`
+`;
 
-export const signInLink = css`
+export const SignInLink = styled.div`
   margin-top: 15px;
   cursor: pointer;
   display: inline-block;
-`
-
+`;

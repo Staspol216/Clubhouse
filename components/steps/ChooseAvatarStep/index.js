@@ -1,5 +1,5 @@
 import React from "react";
-import { link } from "../../../styles/_display";
+import { ModalWrapper } from "../../../styles/shared";
 import Avatar from "../../Avatar";
 import Button from "../../Button";
 import Modal from "../../Modal";
@@ -8,7 +8,7 @@ import * as Styled from "./style";
 
 const ChooseAvatarStep = () => {
   return (
-    <Styled.Wrapper>
+    <ModalWrapper>
       <StepInfo
         icon="/static/celebration.png"
         title={"Okay, !"}
@@ -16,7 +16,7 @@ const ChooseAvatarStep = () => {
       />
       <Modal>
         <Avatar />
-        <Styled.Label htmlFor="image" css={[link]}>
+        <Styled.Label className="link" htmlFor="image">
           Choose a different photo
         </Styled.Label>
         <input id="image" type="file" hidden />
@@ -25,8 +25,8 @@ const ChooseAvatarStep = () => {
           <Styled.ButtonIcon src="/static/arrow.svg" />
         </Button>
       </Modal>
-    </Styled.Wrapper>
-  )
-}
+    </ModalWrapper>
+  );
+};
 
 export default ChooseAvatarStep;

@@ -29,6 +29,39 @@ export const globalStyles = (
     />
     <Global
       styles={css`
+        .loader {
+          display: inline-block;
+          width: 2rem;
+          height: 2rem;
+          border-radius: 50%;
+          border: 0.3rem solid rgba(#b1aa97, 0.3);
+          border-top-color: #b1aa97;
+          animation: 0.5s spin infinite linear;
+        }
+        .link {
+          font-weight: 600;
+          font-size: 15px;
+          color: #4f6fa5;
+          cursor: pointer;
+        }
+        .field {
+          min-width: 100px;
+          height: 65;
+          background: #fff;
+          border: 1px sloid #e3e3e3;
+          box-sizing: border-box;
+          border-radius: 20px;
+          padding: 0 25px;
+          font-size: 20px;
+        }
+        .modal-step-wrapper {
+          margin: 100px auto;
+          text-align: center;
+        }
+      `}
+    />
+    <Global
+      styles={css`
         @keyframes wave-animation {
           0% {
             transform: rotate(0deg);
