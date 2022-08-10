@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { Link } from "../../../styles/shared";
 import Button from "../../Button";
 
 export const GHButton = styled(Button)`
@@ -14,8 +15,6 @@ export const Image = styled.img`
   margin-left: 10;
 `;
 
-export const Link = styled.div`
+export const InfoLink = styled(Link)`
   margin-top: 20px;
-  cursor: pointer;
-  display: inline-block;
 `;

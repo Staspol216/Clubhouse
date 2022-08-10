@@ -1,8 +1,8 @@
 import styled from "@emotion/styled";
+import Image from "next/Image";
 
 export const InputWrapper = styled.div`
   position: relative;
-  margin-bottom: 30px;
   img {
     position: absolute;
     top: 20px;
@@ -10,7 +10,11 @@ export const InputWrapper = styled.div`
   }
   input {
     width: 265px;
-    padding-left: 55px;
+    padding: 17px 20px 17px 30px;
+    background: #FFFFFF;
+    border: 1px solid #E3E3E3;
+    border-radius: 20px;
+    margin-bottom: 40px;
   }
 `;
 
@@ -22,7 +26,7 @@ export const PolicyText = styled.p`
   margin-bottom: 0;
 `;
 
-export const Image = styled.img`
+export const BtnIcon = styled(Image)`
   display: inline-block;
   margin-left: 10px;
 `;

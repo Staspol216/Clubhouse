@@ -1,5 +1,5 @@
-import { WelcomeStep } from "../components/steps/WelcomeStep";
+import { EnterNameStep } from "../components/steps/EnterNameStep";
 
 export default function Home() {
-  return <WelcomeStep />;
+  return <EnterNameStep />;
 }

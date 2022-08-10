@@ -38,12 +38,6 @@ export const globalStyles = (
           border-top-color: #b1aa97;
           animation: 0.5s spin infinite linear;
         }
-        .link {
-          font-weight: 600;
-          font-size: 15px;
-          color: #4f6fa5;
-          cursor: pointer;
-        }
         .field {
           min-width: 100px;
           height: 65;
@@ -53,10 +47,6 @@ export const globalStyles = (
           border-radius: 20px;
           padding: 0 25px;
           font-size: 20px;
-        }
-        .modal-step-wrapper {
-          margin: 100px auto;
-          text-align: center;
         }
       `}
     />

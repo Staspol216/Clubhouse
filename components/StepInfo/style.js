@@ -1,5 +1,8 @@
 import styled from "@emotion/styled";
 
+export const Wrapper = styled.div`
+    margin-bottom: 40px;
+`
 export const Title = styled.b`
     display: block;
     font-size: 20px;
@@ -10,9 +13,4 @@ export const Title = styled.b`
 export const Description = styled.p`
     font-size: 20px;
     margin: 0;
-`
-
-export const Image = styled.img`
-    width: 48px;
-    height: 48px;
 `

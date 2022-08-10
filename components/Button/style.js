@@ -24,10 +24,13 @@ const grayBtn = css`
 
 
 export const Button = styled.button`
+  display: block;
   height: 48px;
+  width: ${({width}) => width ? width : "fit-content"};
   border-radius: 30px;
   border: 0;
   padding: 0 30px;
+  margin: 0 auto;
   font-size: 18px;
   cursor: pointer;
   &:disabled,

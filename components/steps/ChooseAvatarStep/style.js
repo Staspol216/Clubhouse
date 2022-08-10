@@ -1,11 +1,13 @@
 import styled from "@emotion/styled";
+import Image from "next/image";
+import { Link } from "../../../styles/shared";
 
-export const ButtonIcon = styled.img`
+export const BtnIcon = styled(Image)`
   display: inline-block;
   margin-left: 10px;
 `;
 
-export const Label = styled.label`
-  display: block;
+export const Label = styled(Link)`
   margin-bottom: 30px;
 `;
+

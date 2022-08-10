@@ -1,4 +1,4 @@
-import { ModalWrapper } from "../../../styles/shared";
+import * as SharedStyle from "../../../styles/shared.tsx";
 import Modal from "../../Modal";
 import StepInfo from "../../StepInfo";
 import * as Styled from "./style";
@@ -7,7 +7,7 @@ const EnterCodeStep = () => {
   let Condition = true;
   // eslint-disable-next-line no-unused-vars
   return (
-    <ModalWrapper>
+    <SharedStyle.ModalWrapper>
       {Condition ? (
         <>
           <StepInfo
@@ -24,7 +24,7 @@ const EnterCodeStep = () => {
           <h3 css={{ marginTop: 5 }}>Activation in progress ...</h3>
         </div>
       )}
-    </ModalWrapper>
+    </SharedStyle.ModalWrapper>
   );
 };
 

@@ -23,7 +23,7 @@ export const Avatar = styled.div`
     background-size: cover; 
     border: 5px solid #fff;
     box-shadow: 0 0 0 4px #e5e0d0;
-    background-image: ${({ src }) => ( src ? `url(${src})` : "")};
+    background-image: ${({ src }) => ( src ? `url(${src})` : "url(/static/avatar-placeholder.png)")};
     width: ${({ width }) => (width ? width : "45px")};
     height: ${({ height }) => (height ? height : "45px")};
     ${({ isVoice }) => ( isVoice ? voicedAvatarBorder : "")};

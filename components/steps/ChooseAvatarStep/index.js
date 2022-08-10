@@ -1,5 +1,5 @@
 import React from "react";
-import { ModalWrapper } from "../../../styles/shared";
+import * as SharedStyle from "../../../styles/shared.tsx";
 import Avatar from "../../Avatar";
 import Button from "../../Button";
 import Modal from "../../Modal";
@@ -8,7 +8,7 @@ import * as Styled from "./style";
 
 const ChooseAvatarStep = () => {
   return (
-    <ModalWrapper>
+    <SharedStyle.ModalWrapper>
       <StepInfo
         icon="/static/celebration.png"
         title={"Okay, !"}
@@ -16,16 +16,16 @@ const ChooseAvatarStep = () => {
       />
       <Modal>
         <Avatar />
-        <Styled.Label className="link" htmlFor="image">
+        <Styled.Label as="label" htmlFor="image">
           Choose a different photo
         </Styled.Label>
         <input id="image" type="file" hidden />
         <Button>
           Next
-          <Styled.ButtonIcon src="/static/arrow.svg" />
+          <Styled.BtnIcon src="/static/arrow.svg" />
         </Button>
       </Modal>
-    </ModalWrapper>
+    </SharedStyle.ModalWrapper>
   );
 };
 

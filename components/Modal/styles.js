@@ -1,6 +1,9 @@
 import styled from "@emotion/styled";
 
 export const Modal = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   max-width: 650px;
   min-height: 200px;
   width: 460px;
