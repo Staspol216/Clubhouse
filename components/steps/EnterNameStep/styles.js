@@ -1,17 +1,13 @@
 import styled from "@emotion/styled";
-import Image from "next/Image";
+import { Field } from "styles/shared.tsx";
 
 
-export const NameInput = styled.input`
-  height: 65px;
-  background: #FFFFFF;
-  border: 1px solid #E3E3E3;
-  border-radius: 20px;
+export const NameInput = styled(Field)`
   margin-top: 32px;
   margin-bottom: 32px;
 `
 
-export const BtnIcon = styled(Image)`
+export const BtnIcon = styled.div`
   display: inline-block;
   margin-left: 10px;
 `

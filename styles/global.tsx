@@ -38,16 +38,6 @@ export const globalStyles = (
           border-top-color: #b1aa97;
           animation: 0.5s spin infinite linear;
         }
-        .field {
-          min-width: 100px;
-          height: 65;
-          background: #fff;
-          border: 1px sloid #e3e3e3;
-          box-sizing: border-box;
-          border-radius: 20px;
-          padding: 0 25px;
-          font-size: 20px;
-        }
       `}
     />
     <Global

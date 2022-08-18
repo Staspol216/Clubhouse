@@ -1,9 +1,9 @@
-import Image from "next/Image";
+import Button from "components/Button";
+import Modal from "components/Modal";
+import StepInfo from "components/StepInfo";
+import Image from "next/image";
 import NumberFormat from "react-number-format";
-import * as SharedStyle from "../../../styles/shared.tsx";
-import Button from "../../Button";
-import Modal from "../../Modal";
-import StepInfo from "../../StepInfo";
+import * as SharedStyle from "styles/shared.tsx";
 import * as Styled from "./styles";
 
 export const EnterPhoneStep = () => {
@@ -16,9 +16,10 @@ export const EnterPhoneStep = () => {
       />
       <Modal>
         <Styled.InputWrapper>
-          <Image src="/static/russian-flag.png" alt="flag" width={24} height={24} />
+          <Styled.FlagIcon>
+            <Image src="/static/russian-flag.png" alt="flag" width={24} height={24} />
+          </Styled.FlagIcon>
           <NumberFormat
-            className="field"
             format="+# (###) ###-##-##"
             mask="_"
             placeholder="+7 (999) 333-22-11"

@@ -1,12 +1,12 @@
+import Avatar from "components/Avatar";
+import Button from "components/Button";
+import Modal from "components/Modal";
+import StepInfo from "components/StepInfo";
 import React from "react";
-import * as SharedStyle from "../../../styles/shared.tsx";
-import Avatar from "../../Avatar";
-import Button from "../../Button";
-import Modal from "../../Modal";
-import StepInfo from "../../StepInfo";
+import * as SharedStyle from "styles/shared.tsx";
 import * as Styled from "./style";
 
-const ChooseAvatarStep = () => {
+export const ChooseAvatarStep = () => {
   return (
     <SharedStyle.ModalWrapper>
       <StepInfo
@@ -22,11 +22,9 @@ const ChooseAvatarStep = () => {
         <input id="image" type="file" hidden />
         <Button>
           Next
-          <Styled.BtnIcon src="/static/arrow.svg" />
+          <Styled.BtnIcon width={14} height={11} src="/static/arrow.svg" />
         </Button>
       </Modal>
     </SharedStyle.ModalWrapper>
   );
 };
-
-export default ChooseAvatarStep;

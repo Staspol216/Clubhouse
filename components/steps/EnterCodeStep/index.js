@@ -1,9 +1,8 @@
-import * as SharedStyle from "../../../styles/shared.tsx";
-import Modal from "../../Modal";
-import StepInfo from "../../StepInfo";
-import * as Styled from "./style";
+import Modal from "components/Modal";
+import StepInfo from "components/StepInfo";
+import * as SharedStyle from "styles/shared.tsx";
 
-const EnterCodeStep = () => {
+export const EnterCodeStep = () => {
   let Condition = true;
   // eslint-disable-next-line no-unused-vars
   return (
@@ -15,7 +14,7 @@ const EnterCodeStep = () => {
             title="Enter your activate code"
           />
           <Modal>
-            <Styled.CodeInputWrapper></Styled.CodeInputWrapper>
+            <input className="field"></input>
           </Modal>
         </>
       ) : (
@@ -28,4 +27,3 @@ const EnterCodeStep = () => {
   );
 };
 
-export default EnterCodeStep;

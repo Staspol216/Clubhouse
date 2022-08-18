@@ -1,10 +1,11 @@
+import Modal from "components/Modal";
+import StepInfo from "components/StepInfo";
+import Image from "next/image";
 import React from "react";
-import * as SharedStyle from "../../../styles/shared.tsx";
-import Modal from "../../Modal";
-import StepInfo from "../../StepInfo";
+import * as SharedStyle from "styles/shared";
 import * as Styled from "./style";
 
-const GitHubStep = () => {
+export const GitHubStep = () => {
   return (
     <SharedStyle.ModalWrapper>
       <StepInfo
@@ -13,14 +14,16 @@ const GitHubStep = () => {
       />
       <Modal>
         <Styled.GHButton>
-          <Styled.Image src="/static/github.svg" />
+          <Styled.GithubIcon>
+            <Image width={16} height={16} src="/static/github.svg" />
+          </Styled.GithubIcon>
           Import from GitHub
-          <Styled.Image src="/static/arrow.svg" />
+          <Styled.ArrowIcon>
+            <Image width={16} height={16} src="/static/arrow.svg" />
+          </Styled.ArrowIcon>
         </Styled.GHButton>
-        <Styled.Link>Enter my info manually</Styled.Link>
+        <Styled.InfoLink>Enter my info manually</Styled.InfoLink>
       </Modal>
     </SharedStyle.ModalWrapper>
   );
 };
-
-export default GitHubStep;

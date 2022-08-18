@@ -1,5 +1,5 @@
-import * as SharedStyle from "../../../styles/shared.tsx";
-import Button from "../../Button";
+import Button from "components/Button";
+import * as SharedStyle from "styles/shared.tsx";
 import * as Styled from "./styles";
 
 export const WelcomeStep = () => {

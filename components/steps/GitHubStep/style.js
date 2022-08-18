@@ -1,8 +1,10 @@
 import styled from "@emotion/styled";
-import { Link } from "../../../styles/shared";
-import Button from "../../Button";
+import Button from "components/Button";
+import { Link } from "styles/shared";
 
 export const GHButton = styled(Button)`
+  display: flex;
+  align-items: center;
   background-color: #24292e;
 
   &:hover {
@@ -10,9 +12,14 @@ export const GHButton = styled(Button)`
   }
 `;
 
-export const Image = styled.img`
-  display: inline-block;
-  margin-left: 10;
+export const GithubIcon = styled.div`
+
+  margin-right: 10px;
+`;
+
+export const ArrowIcon = styled.div`
+
+  margin-left: 10px;
 `;
 
 export const InfoLink = styled(Link)`
