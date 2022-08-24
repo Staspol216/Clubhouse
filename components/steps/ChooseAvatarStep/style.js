@@ -11,3 +11,7 @@ export const Label = styled(Link)`
   margin-bottom: 30px;
 `;
 
+export const AvatarWrapper = styled.div`
+  margin-bottom: 20px;
+`
+
