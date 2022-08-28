@@ -6,8 +6,8 @@ export const InputWrapper = styled.div`
   input {
     width: 265px;
     padding-left: 55px;
-    background: #FFFFFF;
-    border: 1px solid #E3E3E3;
+    background: #ffffff;
+    border: 1px solid #e3e3e3;
     border-radius: 20px;
     margin-bottom: 40px;
     min-width: 100px;
@@ -25,11 +25,11 @@ export const FlagIcon = styled.div`
   position: absolute;
   top: 20px;
   left: 20px;
-`
+`;
 
 export const PolicyText = styled.p`
   font-size: 14px;
-  line-height: 22px ;
+  line-height: 22px;
   text-align: center;
   color: #817f7a;
   margin-bottom: 0;
@@ -38,4 +38,4 @@ export const PolicyText = styled.p`
 
 export const BtnText = styled.span`
   margin-right: 10px;
-`
+`;

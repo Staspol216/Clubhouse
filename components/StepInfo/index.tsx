@@ -1,7 +1,14 @@
-import Image from "next/Image";
+import Image from "next/image";
+import { FC } from "react";
 import * as Styled from "./style";
 
-const StepInfo = ({ title, description, icon }) => {
+interface Props {
+  title: string;
+  description?: string;
+  icon: string;
+}
+
+const StepInfo: FC<Props> = ({ title, description, icon }) => {
   return (
     <Styled.Wrapper>
       <Image width={48} height={48} src={icon} alt="Step picture" />
@@ -12,4 +19,3 @@ const StepInfo = ({ title, description, icon }) => {
 };
 
 export default StepInfo;
-  

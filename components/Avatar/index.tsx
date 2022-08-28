@@ -1,6 +1,6 @@
 import * as Styled from "./styles";
 
-export interface AvatarProps {
+export interface Props {
   src: string;
   width: string;
   height: string;
@@ -8,13 +8,7 @@ export interface AvatarProps {
   letters?: string;
 }
 
-const Avatar: React.FC<AvatarProps> = ({
-  src,
-  letters,
-  isVoice,
-  width,
-  height,
-}) => {
+const Avatar: React.FC<Props> = ({ src, letters, isVoice, width, height }) => {
   return (
     <Styled.Avatar width={width} height={height} isVoice={isVoice} src={src}>
       {!src ? letters : null}

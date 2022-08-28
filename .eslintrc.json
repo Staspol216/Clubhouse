@@ -1,20 +1,36 @@
 {
-  "extends": ["next", "next/core-web-vitals", "eslint:recommended"],
+  "extends": [
+    "next",
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": ["@typescript-eslint", "next", "prettier"],
   "globals": {
     "React": "readonly"
   },
+  "parserOptions": {
+    "ecmaVersion": 11,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
   "rules": {
-    "no-console": 1,
-    "no-debugger": 1,
-    "comma-dangle": [1, "always-multiline"],
-    "indent": [1, 2, { "SwitchCase": 1 }],
-    "quotes": [1, "double"],
-    "jsx-quotes": [1, "prefer-double"],
-    "max-len": [
-      1,
-      {
-        "code": 120
-      }
-    ]
+    "comma-dangle": ["error", "only-multiline"],
+    "react/prop-types": "off",
+    "react/display-name": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "prettier/prettier": ["error", { "endOfLine": "auto" }],
+    "@typescript-eslint/interface-name-prefix": "off",
+    "@typescript-eslint/ban-ts-ignore": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/no-explicit-any": "error",
+    "@typescript-eslint/no-var-requires": "off",
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off"
   }
 }

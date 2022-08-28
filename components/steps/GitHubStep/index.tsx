@@ -1,7 +1,6 @@
 import Modal from "components/Modal";
 import StepInfo from "components/StepInfo";
 import Image from "next/image";
-import React from "react";
 import * as SharedStyle from "styles/shared";
 import * as Styled from "./style";
 

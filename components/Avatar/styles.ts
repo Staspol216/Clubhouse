@@ -1,7 +1,7 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 
-export interface AvatarProps {
+export interface Props {
   src: string;
   width: string;
   height: string;
@@ -22,7 +22,7 @@ const voicedAvatarBorder = css`
   box-shadow: 0 0 0 4px #e5e0d0;
 `;
 
-export const Avatar = styled.div<AvatarProps>`
+export const Avatar = styled.div<Props>`
   display: inline-block;
   position: relative;
   border-radius: 50%;
