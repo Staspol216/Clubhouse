@@ -1,12 +1,9 @@
 import styled from "@emotion/styled";
 import Image from "next/image";
-import { HiArrowRight } from "react-icons/hi";
-import { Link } from "../../../styles/shared.tsx";
-import Modal from "../../Modal";
+import { Link, ModalWrapper } from "styles/shared";
 
-export const WelcomeModal = styled(Modal)`
+export const WelcomeModal = styled(ModalWrapper)`
   width: 650px;
-  margin: 100px auto;
 `;
 
 export const HandWaveImage = styled(Image)`
@@ -26,7 +23,7 @@ export const Text = styled.span`
   margin-left: 5px;
   font-size: 22px;
 `;
-export const BtnIcon = styled(HiArrowRight)`
+export const BtnIcon = styled(Image)`
   display: inline-block;
   margin-left: 10px;
 `;

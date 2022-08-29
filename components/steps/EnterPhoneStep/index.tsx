@@ -1,8 +1,8 @@
 import Button from "components/Button";
-import Modal from "components/Modal";
 import StepInfo from "components/StepInfo";
 import Image from "next/image";
-import { useState } from "react";
+import { MainContext } from "pages";
+import { useContext, useState } from "react";
 import NumberFormat from "react-number-format";
 import * as SharedStyle from "styles/shared";
 import * as Styled from "./styles";
@@ -13,6 +13,7 @@ interface InputValueStep {
 }
 
 export const EnterPhoneStep = () => {
+  const { onNextStep } = useContext(MainContext);
   const [values, setValues] = useState<InputValueStep>({} as InputValueStep);
 
   const nextDisabled =
@@ -25,7 +26,7 @@ export const EnterPhoneStep = () => {
         title="Enter your phone #"
         description="We will send you a confirmation code"
       />
-      <Modal>
+      <SharedStyle.Modal>
         <Styled.InputWrapper>
           <Styled.FlagIcon>
             <Image
@@ -45,8 +46,8 @@ export const EnterPhoneStep = () => {
             }
           />
         </Styled.InputWrapper>
-        <Button disabled={nextDisabled}>
-          <Styled.BtnText>Next</Styled.BtnText>
+        <Button onClick={onNextStep} disabled={nextDisabled}>
+          <span>Next</span>
           <Image
             width={14}
             height={11}
@@ -58,7 +59,7 @@ export const EnterPhoneStep = () => {
           By entering your number, you’re agreeing to our Terms of Service and
           Privacy Policy. Thanks!
         </Styled.PolicyText>
-      </Modal>
+      </SharedStyle.Modal>
     </SharedStyle.ModalWrapper>
   );
 };

@@ -1,5 +1,4 @@
 import Button from "components/Button";
-import Modal from "components/Modal";
 import { btnIcon } from "./style";
 
 export const TwitterStep = () => {

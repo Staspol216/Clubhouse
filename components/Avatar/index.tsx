@@ -1,7 +1,7 @@
 import * as Styled from "./styles";
 
 export interface Props {
-  src: string;
+  src?: string;
   width: string;
   height: string;
   isVoice?: boolean;

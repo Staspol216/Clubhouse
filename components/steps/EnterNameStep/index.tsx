@@ -1,12 +1,25 @@
-import Avatar from "components/Avatar";
 import Button from "components/Button";
-import Modal from "components/Modal";
 import StepInfo from "components/StepInfo";
 import Image from "next/image";
-import * as SharedStyle from "styles/shared.tsx";
+import { MainContext } from "pages";
+import { ChangeEvent, FC, useContext, useState } from "react";
+import * as SharedStyle from "styles/shared";
 import * as Styled from "./styles";
 
-export const EnterNameStep = () => {
+export const EnterNameStep: FC = () => {
+  const [inputValue, setInputValue] = useState<string>("");
+  const { onNextStep } = useContext(MainContext);
+
+  const nextDisabled = !inputValue;
+
+  const handleChangeInput = (e: ChangeEvent<HTMLInputElement>) => {
+    setInputValue(e.target.value);
+  };
+
+  const onClickNextStep = () => {
+    onNextStep();
+  };
+
   return (
     <SharedStyle.ModalWrapper>
       <StepInfo
@@ -14,16 +27,17 @@ export const EnterNameStep = () => {
         title="What’s your full name?"
         description="People use real names on Clubhouse :) Thnx!"
       />
-      <Modal>
-        <Avatar width="120px" height="120px" />
-        <Styled.NameInput placeholder="Enter fullname" />
-        <Button width="160px">
-          Next
-          <Styled.BtnIcon>
-            <Image width={14} height={11} src="/static/arrow.svg" alt="icon" />
-          </Styled.BtnIcon>
+      <SharedStyle.Modal>
+        <Styled.NameInput
+          onChange={handleChangeInput}
+          value={inputValue}
+          placeholder="Enter fullname"
+        />
+        <Button disabled={nextDisabled} onClick={onClickNextStep}>
+          <span>Next</span>
+          <Image width={14} height={11} src="/static/arrow.svg" alt="icon" />
         </Button>
-      </Modal>
+      </SharedStyle.Modal>
     </SharedStyle.ModalWrapper>
   );
 };

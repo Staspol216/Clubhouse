@@ -1,12 +1,13 @@
 import Avatar from "components/Avatar";
 import Button from "components/Button";
-import Modal from "components/Modal";
 import StepInfo from "components/StepInfo";
-import React, { ChangeEvent, useState } from "react";
+import { MainContext } from "pages";
+import { ChangeEvent, FC, useContext, useState } from "react";
 import * as SharedStyle from "styles/shared";
 import * as Styled from "./style";
 
-export const ChooseAvatarStep: React.FC = () => {
+export const ChooseAvatarStep: FC = () => {
+  const { onNextStep } = useContext(MainContext);
   const [avatarUrl, setAvatarUrl] = useState<string>("");
 
   const handleChangeImage = (e: ChangeEvent<HTMLInputElement>): void => {
@@ -24,7 +25,7 @@ export const ChooseAvatarStep: React.FC = () => {
         title={"Okay, !"}
         description="How`s this photo?"
       />
-      <Modal>
+      <SharedStyle.Modal>
         <Styled.AvatarWrapper>
           <Avatar width="120px" height="120px" src={avatarUrl} />
         </Styled.AvatarWrapper>
@@ -32,11 +33,11 @@ export const ChooseAvatarStep: React.FC = () => {
           Choose a different photo
         </Styled.Label>
         <input onChange={handleChangeImage} id="image" type="file" hidden />
-        <Button>
-          Next
+        <Button onClick={onNextStep}>
+          <span>Next</span>
           <Styled.BtnIcon width={14} height={11} src="/static/arrow.svg" />
         </Button>
-      </Modal>
+      </SharedStyle.Modal>
     </SharedStyle.ModalWrapper>
   );
 };

@@ -35,7 +35,3 @@ export const PolicyText = styled.p`
   margin-bottom: 0;
   margin-top: 20px;
 `;
-
-export const BtnText = styled.span`
-  margin-right: 10px;
-`;

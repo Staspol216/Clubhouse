@@ -1,18 +1,21 @@
-import Modal from "components/Modal";
 import StepInfo from "components/StepInfo";
 import Image from "next/image";
+import { MainContext } from "pages";
+import { useContext } from "react";
 import * as SharedStyle from "styles/shared";
 import * as Styled from "./style";
 
 export const GitHubStep = () => {
+  const { onNextStep } = useContext(MainContext);
+
   return (
     <SharedStyle.ModalWrapper>
       <StepInfo
         icon="/static/connect.png"
         title="Do you want import info from GitHub?"
       />
-      <Modal>
-        <Styled.GHButton>
+      <SharedStyle.Modal>
+        <Styled.GHButton onClick={onNextStep}>
           <Styled.GithubIcon>
             <Image width={16} height={16} src="/static/github.svg" />
           </Styled.GithubIcon>
@@ -22,7 +25,7 @@ export const GitHubStep = () => {
           </Styled.ArrowIcon>
         </Styled.GHButton>
         <Styled.InfoLink>Enter my info manually</Styled.InfoLink>
-      </Modal>
+      </SharedStyle.Modal>
     </SharedStyle.ModalWrapper>
   );
 };

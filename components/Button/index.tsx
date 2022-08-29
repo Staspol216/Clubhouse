@@ -4,7 +4,8 @@ import * as Styled from "./style";
 interface Props {
   disabled?: boolean;
   children?: ReactNode;
-  color?: "gray" | "green";
+  width?: string;
+  color?: "gray" | "green" | "blue";
   onClick?: (e: MouseEvent<HTMLButtonElement>) => void;
 }
 
@@ -12,6 +13,7 @@ const Button: FC<Props> = ({
   children,
   disabled,
   color,
+  width,
   onClick,
   ...props
 }) => {
@@ -20,6 +22,7 @@ const Button: FC<Props> = ({
       type="button"
       onClick={onClick}
       disabled={disabled}
+      width={width}
       {...props}
       color={color}
     >
