@@ -1,9 +1,3 @@
-import { EnterPhoneStep } from "components/steps/EnterPhoneStep";
-
 export default function RoomsPage() {
-  return (
-    <div>
-      <EnterPhoneStep />
-    </div>
-  );
+  return <div>Rooms</div>;
 }

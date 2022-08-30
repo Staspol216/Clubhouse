@@ -15,11 +15,11 @@ const ProfilePage: FC<ProfilePageProps> = ({ profileData }) => {
   return (
     <>
       <Header />
-      <div>
+      <div style={{ margin: "0 auto", width: 1240, marginTop: 30 }}>
         <Profile
-          avatarUrl={profileData.avatarUrl}
-          fullname={profileData.fullname}
-          username={profileData.username}
+          avatarUrl="static/avatar-placeholder.png"
+          fullname={"StasPol"}
+          username={"ReaNOD"}
           about="Test info"
         />
       </div>

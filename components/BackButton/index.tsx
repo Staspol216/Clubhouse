@@ -12,7 +12,7 @@ export const BackButton: FC<BackButtonProps> = ({ title, href }) => {
   return (
     <Link href={href}>
       <Styled.BackButton>
-        <Image src="/static/back-arrow.svg" alt="Back" />
+        <Image width={20} height={20} src="/static/back-arrow.svg" alt="Back" />
         <h3>{title}</h3>
       </Styled.BackButton>
     </Link>
